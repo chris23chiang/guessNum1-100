@@ -5,14 +5,20 @@
 
 import random
 ans = random.randint(1, 100)
+count = 0
 
 while True:
+	count += 1
+	print('這是你猜的第', count, "次!")
 	guess = eval(input('請輸入一個數字1~100:'))
 	if guess == ans:
 		print("終於猜對了!")
 		break
 	else:
 		if guess > ans:
-			print('猜錯了，猜得比答案還大!')
+			print('比答案還大!')
+			print(' ')
 		else:
-			print('猜錯了，猜得比答案還小!')
+			print('比答案還小!')
+			print(' ')
+
